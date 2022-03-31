@@ -1,0 +1,22 @@
+{
+  "name": "javascriptlearn",
+  "version": "1.0.0",
+  "description": "Learning JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benbraide/JavascriptLearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benbraide/JavascriptLearn/issues"
+  },
+  "homepage": "https://github.com/benbraide/JavascriptLearn#readme",
+  "devDependencies": {
+    "node-static": "^0.7.11"
+  }
+}

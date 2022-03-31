@@ -1,0 +1,286 @@
+body.home, body.create.begin:not(.play){
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.home h1{
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+body.home h2{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+body.home .links{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+body.home .links > a, body.create button:not(.action), body.create .form .line input{
+    padding: 0.5rem 2rem;
+    border: solid 1px #777777;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+body.home .links > a + a{
+    margin-left: 2rem;
+}
+
+body.home .links > a:hover, body.create button:hover{
+    background: #dddddd;
+}
+
+button.action{
+    padding: 0.5rem 1rem;
+    border: solid 1px #777777;
+    border-radius: 0.5rem;
+    background: brown;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+button.action:hover{
+    color: #000000;
+}
+
+nav{
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    @media (min-width: 1024px) {
+  
+    nav {
+      padding: 0;
+    }
+  }
+
+nav > .logo{
+    font-size: 2rem;
+    color: brown;
+    font-weight: 700;
+}
+
+nav > .others{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav > .others > a + a{
+    margin-left: 2rem;
+}
+
+body.create:not(.began):not(.play) main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.create.began main, body.play main{
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+body.create h2, body.play h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+body.create.began h2{
+    text-align: left;
+}
+
+body.create .form{
+    margin-top: 1rem;
+}
+
+body.create .form .line{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+body.create .form .line + .line{
+    margin-top: 1rem;
+}
+
+body.create .form .line label{
+    font-weight: 600;
+}
+
+body.create .form .line input{
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 32rem;
+}
+
+body.create button:not(.action){
+    font-size: 1.3rem;
+}
+
+body.create main button:not(.action){
+    margin-top: 2rem;
+}
+
+body.create .questions, body.create .options{
+    margin: 2rem 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+body.create .options{
+    margin: 2rem 0 0 2rem;
+}
+
+body.create .questions > div, body.create .options > div{
+    padding: 1.5rem 1rem 1rem;
+    border: solid 1px #777777;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+body.create .questions > div > p, body.create .options > div > p{
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+    padding: 0.2rem 0.5rem;
+    background: #ffffff;
+    font-weight: 600;
+}
+
+body.create .questions .add-option{
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+body.create .form .add-question{
+    margin-top: 1.5rem;
+}
+
+body.create button.save{
+    margin-left: 1rem;
+    background-color: #ffffff;
+    color: #444444;
+    border-color: brown;
+}
+
+body.play .quiz-list{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+body.play .quiz-list > button{
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+    margin-right: 1rem;
+    overflow: hidden;
+    box-shadow: 1px 2px 10px;
+    width: 12rem;
+    height: 20rem;
+}
+
+body.play .quiz-list > button:hover{
+    background: lightgrey;
+    transform: scale(105%);
+}
+
+body.play .quiz-list > button > img{
+    width: auto;
+    height: 100%;
+}
+
+body.play #timer{
+    margin-top: 2rem;
+    font-size: 2.2rem;
+}
+
+body.play #question-value{
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #444444;
+}
+
+body.play #question-options{
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #444444;
+}
+
+body.play #actions{
+    margin-top: 2rem;
+}
+
+.hidden{
+  display: none;
+}
+
+.container {
+    width: 100%;
+  }
+  @media (min-width: 640px) {
+  
+    .container {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+  
+    .container {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+  
+    .container {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+  
+    .container {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+  
+    .container {
+      max-width: 1536px;
+    }
+  }

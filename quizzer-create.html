@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a quiz</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="quizzer.css">
+</head>
+<body class="create begin">
+    <nav class="container">
+        <a href="quizzer.html" class="logo">Awesome Quizzer</a>
+        <div class="others">
+            <a href="quizzer-play.html">Play</a>
+            <a href="quizzer-edit.html">Edit</a>
+        </div>
+    </nav>
+    <main>
+        <h2>Create a New Quiz</h2>
+        <button>Begin</button>
+        <div class="form hidden">
+            <div class="line">
+                <label for="name">Quiz name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="line">
+                <label for="avatar">Quiz avatar URL</label>
+                <input type="text" id="avatar">
+            </div>
+
+            <div class="questions"></div>
+
+            <button class="action add-question">Add new question</button>
+            <button class="action save">Save Quiz</button>
+            <button class="action cancel">Cancel</button>
+        </div>
+    </main>
+
+    <template id="tmpl-add-option">
+        <div>
+            <p class="title"></p>
+            <div class="line">
+                <label class="label">Option value</label>
+                <input type="text" class="input">
+            </div>
+            <label>
+                <input type="checkbox">
+                <span>Use as correct option</span>
+            </label>
+        </div>
+    </template>
+
+    <template id="tmpl-add-question">
+        <div>
+            <p class="title"></p>
+            <div class="line">
+                <label class="label">Question value</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="options"></div>
+
+            <button class="action add-option">Add new option</button>
+        </div>
+    </template>
+    
+    <script src="project.js"></script>
+    <script>
+        let quizzer = new Quizzer;
+        quizzer.create();
+    </script>
+</body>
+</html>

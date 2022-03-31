@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a quiz</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="quizzer.css">
+</head>
+<body class="play begin">
+    <nav class="container">
+        <a href="quizzer.html" class="logo">Awesome Quizzer</a>
+        <div class="others">
+            <a href="quizzer-edit.html">Edit</a>
+            <a href="quizzer-create.html">Create</a>
+        </div>
+    </nav>
+    <main class="container">
+        <div id="choice">
+            <h2>Choose a Quiz to Play</h2>
+            <div class="quiz-list"></div>
+        </div>
+        <div id="play-area" class="hidden">
+            <h2></h2>
+            <p id="timer">
+                <span>Time Spent:</span>
+                <span></span>
+            </p>
+            <p id="question-value">
+                <span></span>
+                <span></span>
+            </p>
+            <div id="question-options"></div>
+            <div id="actions">
+                <button id="next-question" class="action">Next Question &gt;&gt;</button>
+            </div>
+        </div>
+    </main>
+
+    <template id="tmpl-quiz-item">
+        <button>
+            <img alt="Photo of something">
+        </button>
+    </template>
+
+    <template id="tmpl-quiz-question-option">
+        <p class="question-option">
+            <span></span>
+            <button></button>
+        </p>
+    </template>
+    
+    <script src="project.js"></script>
+    <script>
+        let quizzer = new Quizzer;
+        quizzer.play();
+    </script>
+</body>
+</html>
